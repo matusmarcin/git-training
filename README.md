@@ -107,3 +107,16 @@ git push --u origin development
 Now we have multiple branches and when running `git branch` we can see the current one highlighted with an asterisk.
 
 To switch between existing branches just use `git checkout <branch>`.
+
+# Merging 
+
+As soon as you use branches, you need to be able to merge. 
+
+Switch to `development` branch and make changes to `development.txt` file. Commit your changes. Let's have someone else do the same but also `push` their changes before you manage to. When you try to push them, git warns you to `pull` first. 
+
+How did I get this far into a tutorial without a `git pull`? It's the opposite of `push`. With `pull` you get changes from the remote repo into your own. Unless there are conflicts, git merges your changes automagically.
+
+```
+git pull
+```
+
