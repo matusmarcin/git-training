@@ -29,7 +29,11 @@ git add hello.txt
 git add assets
 ```
 
-Now check the `status` again and see there are changes *to be committed* and *not staged* (if you have modified something). Let's stage those changed files too:
+Now check the `status` again and see there are changes *to be committed* and *not staged* (if you have modified something). 
+
+![git status](/assets/status.png)
+
+Let's stage those changed files too:
 
 ```
 git commit README.md
@@ -114,11 +118,19 @@ As soon as you use branches, you need to be able to merge.
 
 Switch to `development` branch and make changes to `development.txt` file. Commit your changes. Let's have someone else do the same but also `push` their changes before you manage to. When you try to push them, git warns you to `pull` first. 
 
+![git push but pull first](/assets/push-rejected.png)
+
 How did I get this far into a tutorial without a `git pull`? It's the opposite of `push`. With `pull` you get changes from the remote repo into your own. Unless there are conflicts, git merges your changes automagically.
 
 ```
 git pull
 ```
+
+![git pull auto-merge no conflicts](/assets/pull-auto-merge.png)
+
+That's it, you don't have to do anything. Unless it fails :-)
+
+![git pull auto-merge with conflicts](/assets/pull-merge-conflict.png)
 
 When this failes and you have conflict, git leaves the changes in the files below *HEAD* mark are your changes and above the *commit hash* are changes from the remote repo. Use your smarts to merge this properly or consult with the person that made those changes. Then, commit this to finish the merge:
 
