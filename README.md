@@ -16,7 +16,7 @@ echo "assets will go here">assets/readme.txt
 echo "another file">assets/file.txt
 ```
 
-Now see the status of your repo.
+Now see the status of your repo:
 
 ```
 git status
@@ -119,4 +119,3 @@ How did I get this far into a tutorial without a `git pull`? It's the opposite o
 ```
 git pull
 ```
-
