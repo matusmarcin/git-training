@@ -53,11 +53,15 @@ Let's also get rid of the editor and just type in the message using `-m`:
 git commit -a -m "Fixed that nasty bug."
 ```
 
+![git commit](/assets/commit-a-m.png)
+
 Now the changes are committed into our repository (*locally*) so let's push them to remote origin.
 
 ```
 git push remote origin
 ```
+
+![git push](/assets/push.png)
 
 Depeding on your circumstances, a `git push` might be enough.
 
@@ -67,6 +71,8 @@ Let's what we have done using `log`.
 git log
 git log --oneline
 ```
+
+![git log oneline](/assets/log-oneline.png)
 
 We can see our commit so hurray, great job everybody.
 
@@ -87,6 +93,8 @@ Remembed this show only *local* branches. Explore the origin using `-a`:
 ```
 git branch -a
 ```
+
+![git branch](/assets/branch.png)
 
 Probably just *master*. That's the default. Let's create a branch.
 
@@ -140,10 +148,16 @@ git commit -a
 
 ## Merging from a different branch
 
-# Rebase
+## Rebase
 
 ## Reset
 
-# Feature Branch Workflow
+# Git Workflows
 
-# Forking Workflow
+## Feature Branch Workflow
+
+### Pull Request (PR)
+
+## Forking Workflow
+
+### Pull Request (PR)
