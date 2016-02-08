@@ -29,7 +29,7 @@ git add hello.txt
 git add assets
 ```
 
-Now check the `status` again and see there are changes *to be committed* and *not staged* (if you have modified something). Let's stage those changed files too.
+Now check the `status` again and see there are changes *to be committed* and *not staged* (if you have modified something). Let's stage those changed files too:
 
 ```
 git commit README.md
