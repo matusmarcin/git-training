@@ -80,6 +80,8 @@ Okay, those are the uber-basics. Let's get to the basics now.
 
 # Branches
 
+_**Understand the sh*t out of branches by studying up on [this tutorial from Atlassian](https://www.atlassian.com/git/tutorials/using-branches)**_
+
 You cannot really say you can use git unless you're using branches. Branches in git are really easy to use and often part of your daily workflow.
 
 Inspect the branches on your repo:
@@ -140,7 +142,7 @@ That's it, you don't have to do anything. Unless it fails :-)
 
 ![git pull auto-merge with conflicts](/assets/pull-merge-conflict.png)
 
-When this failes and you have conflict, git leaves the changes in the files below *HEAD* mark are your changes and above the *commit hash* are changes from the remote repo. Use your smarts to merge this properly or consult with the person that made those changes. Then, commit this to finish the merge:
+When this failes and you have conflict, git leaves the changes in the files. Below *HEAD* mark are your changes and above the *commit hash* are changes from the remote repo. Use your smarts to merge this properly or consult with the person that made those changes. Then, commit this to finish the merge:
 
 ```
 git commit -a
@@ -148,9 +150,22 @@ git commit -a
 
 ## Merging from a different branch
 
+Now let's assume you've done some development work on that branch and those changes are now ready to be merged back into `master`. This can be either simple or a bit tricky.
+
+```
+git checkout master
+git merge development
+```
+
+This is how we merge `development` into the `master` branch.
+
+
+
 ## Rebase
 
 ## Reset
+
+## Stashing
 
 # Git Workflows
 
