@@ -119,3 +119,9 @@ How did I get this far into a tutorial without a `git pull`? It's the opposite o
 ```
 git pull
 ```
+
+When this failes and you have conflict, git leaves the changes in the files below *HEAD* mark are your changes and above the *commit hash* are changes from the remote repo. Use your smarts to merge this properly or consult with the person that made those changes. Then, commit this to finish the merge:
+
+```
+git commit -a
+```
