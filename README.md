@@ -157,11 +157,49 @@ git checkout master
 git merge development
 ```
 
-This is how we merge `development` into the `master` branch. In various cases git cleverly decides the correct strategy and just merges it properly. However, if your work on `development` took a while and `master` was changed at the same time, you need to...
-
-
+This is how we merge `development` into the `master` branch. In various cases git cleverly decides the correct strategy and just merges it properly. However, if your work on `development` took a while and `master` was changed at the same time, you probably need to... follow your git workflow. Especially if you're going to have conflicts.
 
 ## Rebase
+
+Rebasing can cleanup git history nicely. Rebasing must be used with caution. A good rule is to never use `rebase` on already published code. So the use case here is, commit some stuff localy, then rebase it into a single commit or nicer commits and push.
+
+```
+git checkout -b some-feature
+```
+
+Do some development...
+
+```
+git rebase master
+git checkout master
+git merge some-feature
+```
+
+And this is not so bad, we now all commits from `some-feature` at the top of the master. Perhaps we could've squashed those commits into one, so that the history looks real nice. This can be done with interactive rebase.
+
+```
+git rebase -i master
+```
+
+Or let's say we don't want to change all the commits, only last three:
+
+```
+git rebase -i HEAD~3
+```
+
+Anyways, this gives us a text editor with all the commits and options to take them in, change the message, squash them together or leave them out.
+
+![git rebase interactive](/assets/rebase-i.png)
+
+```
+r abfce88 More development
+f 4acb83d More development
+f 93f53ee More development
+```
+
+```
+git merge-base feature master
+```
 
 ## Reset
 
