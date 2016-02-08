@@ -137,3 +137,13 @@ When this failes and you have conflict, git leaves the changes in the files belo
 ```
 git commit -a
 ```
+
+## Merging from a different branch
+
+# Rebase
+
+## Reset
+
+# Feature Branch Workflow
+
+# Forking Workflow
