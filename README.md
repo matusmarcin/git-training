@@ -157,7 +157,7 @@ git checkout master
 git merge development
 ```
 
-This is how we merge `development` into the `master` branch.
+This is how we merge `development` into the `master` branch. In various cases git cleverly decides the correct strategy and just merges it properly. However, if your work on `development` took a while and `master` was changed at the same time, you need to...
 
 
 
