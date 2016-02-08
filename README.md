@@ -163,11 +163,13 @@ This is how we merge `development` into the `master` branch. In various cases gi
 
 Rebasing can cleanup git history nicely. Rebasing must be used with caution. A good rule is to never use `rebase` on already published code. So the use case here is, commit some stuff localy, then rebase it into a single commit or nicer commits and push.
 
+Let's start with a new branch for our feature:
+
 ```
 git checkout -b some-feature
 ```
 
-Do some development...
+Do some development... and then rebase:
 
 ```
 git rebase master
@@ -175,7 +177,7 @@ git checkout master
 git merge some-feature
 ```
 
-And this is not so bad, we now all commits from `some-feature` at the top of the master. Perhaps we could've squashed those commits into one, so that the history looks real nice. This can be done with interactive rebase.
+And this is not so bad, we now all commits from `some-feature` at the top of the master. Perhaps we could've squashed those commits into one, so that the history looks real nice. This can be done with interactive rebase using `-i` flag.
 
 ```
 git rebase -i master
@@ -192,10 +194,12 @@ Anyways, this gives us a text editor with all the commits and options to take th
 ![git rebase interactive](/assets/rebase-i.png)
 
 ```
-r abfce88 More development
-f 4acb83d More development
-f 93f53ee More development
+reword abfce88 More development
+fixup 4acb83d More development
+fixup 93f53ee More development
 ```
+
+This way we squash the two commits together with the third one - wihout including their commit message (`fixup`) - and `reword` the message for the first one. Reword option shows us the editor again to type in a new message.
 
 ```
 git merge-base feature master
