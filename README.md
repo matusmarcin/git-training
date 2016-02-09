@@ -252,18 +252,72 @@ git revert <commit>
 
 ## Stashing
 
+Would you ever decide you don't want to commit your work but don't want to loose it `stash` is the solution.
+
+```
+git stash
+git stash apply
+```
+
+```
+git stash list
+git stash apply stash@{2}
+```
+
+Or create a branch from your stash!
+
+```
+git stash branch testchanges
+```
+
 # Git Workflows
 
 ## Feature Branch Workflow
 
-https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+_**[This article is a much better resource.](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)**_
+
+Simply put: *Every feature is a new branch.*
+
+In reality, you'll probably have to deal with conflicts in case someone else merges their branch before you do, so you're probably better with something like this:
+
+1. Create a branch (from `master`) for your new feature
+2. Do your work
+3. Checkout and pull `master`
+4. Merge `master` into your branch to resolve conflicts and catch-up
+5. Merge your branch into master
+
+To do a really good job you can use `rebase` in the step 4. And you really should create a *Pull Request* to merge your branch in step 5.
 
 ### Pull Request (PR)
 
+You can use GitHub to create a pull request (PR). Just find a button somewhere and click it. Then choose *base* as where you want your stuff to end up and *compare* as your stuff you want to merge. So the pull request is a request to merge *compare* into *base*, *your branch* into *master* or *development*.
+
+![pull request](/assets/open-pr.png)
+
 ## Gitflow Workflow
 
-https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+_**This is [the guy who came up with this](http://nvie.com/posts/a-successful-git-branching-model/) and this is [another good article on it](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).**_
+
+This is arguably the best and most used workflow. It has:
+
+* `master`
+* `development`
+* `feature-*` branches created from `development`
+* `hotfix-*` branches created from `master`
+* `release-*` branches created from `development` to be merged into `master`
+
+![gitflow](http://nvie.com/img/git-model@2x.png)
 
 ## Forking Workflow
 
-https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow
+_**[Learn about forking workflow here!](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow)**_
+
+This one is different from the others above since the workflow is:
+
+1. You fork the repository
+2. Implement your changes
+3. Create a PR for a project maintainer to merge your changes
+
+You can and still should use _feature branch workflow_ inside your own repository.
+
+With this workflow you have two remotes where you can call your own `origin` and the project maintainers `upstream`.
