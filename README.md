@@ -224,9 +224,7 @@ fixup 93f53ee More development
 
 This way we squash the two commits together with the third one - wihout including their commit message (`fixup`) - and `reword` the message for the first one. Reword option shows us the editor again to type in a new message.
 
-```
-git merge-base feature master
-```
+The other day I have found [`git merge-base`](https://git-scm.com/docs/git-merge-base) but having never used it, I am just going to tell to read about it by yourself.
 
 # Other useful commands
 
@@ -272,6 +270,8 @@ git stash branch testchanges
 
 # Git Workflows
 
+Workflows are about how we organise our work in git repo. We already know most of the commands we need for this, we're only going to be using them. 
+
 ## Feature Branch Workflow
 
 _**[This article is a much better resource.](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)**_
@@ -284,13 +284,13 @@ In reality, you'll probably have to deal with conflicts in case someone else mer
 2. Do your work
 3. Checkout and pull `master`
 4. Merge `master` into your branch to resolve conflicts and catch-up
-5. Merge your branch into master
+5. Merge your branch into `master`
 
-To do a really good job you can use `rebase` in the step 4. And you really should create a *Pull Request* to merge your branch in step 5.
+To do a really good job you can use **`rebase` in the step 4**. And you really should create **a pull request to merge your branch in step 5**.
 
 ### Pull Request (PR)
 
-You can use GitHub to create a pull request (PR). Just find a button somewhere and click it. Then choose *base* as where you want your stuff to end up and *compare* as your stuff you want to merge. So the pull request is a request to merge *compare* into *base*, *your branch* into *master* or *development*.
+You can use GitHub to create a pull request (PR). Just find a button somewhere and click it. Then choose *base* as where you want your stuff to end up and *compare* as your stuff you want to merge. So the pull request is a request to merge *compare* into *base*, i.e. *your branch* into *master* or *development*.
 
 ![pull request](/assets/open-pr.png)
 
@@ -320,4 +320,13 @@ This one is different from the others above since the workflow is:
 
 You can and still should use _feature branch workflow_ inside your own repository.
 
-With this workflow you have two remotes where you can call your own `origin` and the project maintainers `upstream`.
+With this workflow you have **two remotes** where you can call your own `origin` and the project maintainers `upstream`.
+
+# Resources
+
+* [git-scm.com - A book, reference and all](https://git-scm.com/doc)
+* [Great tutorials by Atlassian](https://www.atlassian.com/git/tutorials)
+* [Learn Git in 15 minutes](https://try.github.io/)
+* [List of good resourced compiled by GitHub](https://help.github.com/articles/good-resources-for-learning-git-and-github/)
+
+Have fun!
