@@ -161,6 +161,10 @@ This is how we merge `development` into the `master` branch. In various cases gi
 
 ## Rebase
 
+**Rebasing takes a branch and makes it a base for our current branch. It does not directly change the branch but the idea is that we will merge the current branch into that branch in the next step.**
+
+_**Make sense out of rebase with these two tutorials from Atlassian: [`git rebase`](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) and [Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)**_
+
 Rebasing can cleanup git history nicely. Rebasing must be used with caution. A good rule is to never use `rebase` on already published code. So the use case here is, commit some stuff localy, then rebase it into a single commit or nicer commits and push.
 
 Let's start with a new branch for our feature:
@@ -206,6 +210,24 @@ git merge-base feature master
 ```
 
 ## Reset
+
+Don't really do this. Only on your own local unpublished code. It's like a permanent undo.
+
+```
+git reset <commit>
+```
+
+[Read more about `reset`.](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset)
+
+## Revert
+
+Revert is a good undo you can use, if you want to fix a screw up. It actually commits a new change that reverts exactly what you wanted to. This prevents git from losing history (so that everybody can know about your screw up) - and that's a good thing.
+
+```
+git revert <commit>
+```
+
+[Read more about `revert`.](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert)
 
 ## Stashing
 
