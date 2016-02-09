@@ -1,6 +1,23 @@
 # git-training
 Up your Git game.
 
+  * [Basics](#basics)
+  * [Branches](#branches)
+  * [Merging](#merging)
+    * [Merging from a different branch](#merging-from-a-different-branch)
+  * [Rebase](#rebase)
+  * [Other useful commands](#other-useful-commands)
+    * [Reset](#reset)
+    * [Revert](#revert)
+    * [Stashing](#stashing)
+  * [Git Workflows](#git-workflows)
+    * [Feature Branch Workflow](#feature-branch-workflow)
+      * [Pull Request (PR)](#pull-request-pr)
+    * [Gitflow Workflow](#gitflow-workflow)
+    * [Forking Workflow](#forking-workflow)
+
+## Basics
+
 Get the repo:
 
 ```
@@ -124,6 +141,8 @@ To switch between existing branches just use `git checkout <branch>`.
 
 # Merging 
 
+_**Make friends with `merge` in this [tutorial by Atlassian](https://www.atlassian.com/git/tutorials/using-branches/git-merge).**_
+
 As soon as you use branches, you need to be able to merge. 
 
 Switch to `development` branch and make changes to `development.txt` file. Commit your changes. Let's have someone else do the same but also `push` their changes before you manage to. When you try to push them, git warns you to `pull` first. 
@@ -159,7 +178,7 @@ git merge development
 
 This is how we merge `development` into the `master` branch. In various cases git cleverly decides the correct strategy and just merges it properly. However, if your work on `development` took a while and `master` was changed at the same time, you probably need to... follow your git workflow. Especially if you're going to have conflicts.
 
-## Rebase
+# Rebase
 
 **Rebasing takes a branch and makes it a base for our current branch. It does not directly change the branch but the idea is that we will merge the current branch into that branch in the next step.**
 
@@ -209,6 +228,8 @@ This way we squash the two commits together with the third one - wihout includin
 git merge-base feature master
 ```
 
+# Other useful commands
+
 ## Reset
 
 Don't really do this. Only on your own local unpublished code. It's like a permanent undo.
@@ -235,8 +256,14 @@ git revert <commit>
 
 ## Feature Branch Workflow
 
+https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+
 ### Pull Request (PR)
+
+## Gitflow Workflow
+
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
 ## Forking Workflow
 
-### Pull Request (PR)
+https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow
