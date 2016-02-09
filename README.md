@@ -10,6 +10,7 @@ Up your Git game.
     * [Reset](#reset)
     * [Revert](#revert)
     * [Stashing](#stashing)
+    * [Patching](#patching)
   * [Git Workflows](#git-workflows)
     * [Feature Branch Workflow](#feature-branch-workflow)
       * [Pull Request (PR)](#pull-request-pr)
@@ -268,6 +269,36 @@ Or create a branch from your stash!
 ```
 git stash branch testchanges
 ```
+
+## Patching
+
+Sometimes you just can't push changes directly to the repository and need to send changes by other channel. One of the ways you can use is creating patch.
+You can create patch directly from the changes you just made:
+```
+git diff > my_cool_changes.patch
+```
+or from specific commit:
+```
+git format-patch -1 <COMMIT_SHA>
+```
+After that, patch can be applied somewhere else. First, let's see what's in there:
+```
+git apply --stat my_cool_changes.patch
+```
+Next, you can check how troublesome applying is going to be, git allows that by running:
+```
+git apply --check my_cool_changes.patch
+```
+And if everything looks fine, patch can be applied simply by:
+```
+git apply my_cool_changes.patch
+```
+If patch was created from commit(s), patch can be even signed as normal comit:
+```
+git am --signoff < patch_from_commit.patch
+```
+Good reading about patches can be find [here](http://rypress.com/tutorials/git/patch-workflows).
+
 
 # Git Workflows
 
