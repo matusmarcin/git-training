@@ -15,6 +15,7 @@ Up your Git game.
       * [Pull Request (PR)](#pull-request-pr)
     * [Gitflow Workflow](#gitflow-workflow)
     * [Forking Workflow](#forking-workflow)
+  * [Resources](#resources)
 
 ## Basics
 
@@ -306,7 +307,7 @@ This is arguably the best and most used workflow. It has:
 * `hotfix-*` branches created from `master`
 * `release-*` branches created from `development` to be merged into `master`
 
-![gitflow](assets/git-model@2x.png =300x)
+![gitflow](/assets/git-model@2x.png =300x)
 
 _[Image source](http://nvie.com/posts/a-successful-git-branching-model/)_
 
