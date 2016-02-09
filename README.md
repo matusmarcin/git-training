@@ -306,7 +306,7 @@ This is arguably the best and most used workflow. It has:
 * `hotfix-*` branches created from `master`
 * `release-*` branches created from `development` to be merged into `master`
 
-![gitflow](http://nvie.com/img/git-model@2x.png)
+![gitflow](http://nvie.com/img/git-model@2x.png =300x)
 
 ## Forking Workflow
 
