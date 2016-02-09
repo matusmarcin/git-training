@@ -307,7 +307,7 @@ This is arguably the best and most used workflow. It has:
 * `hotfix-*` branches created from `master`
 * `release-*` branches created from `development` to be merged into `master`
 
-<img src="/assets/git-model@2x.png" width="300px" alt="gitflow" />
+[<img src="/assets/git-model@2x.png" width="500px" alt="gitflow" />](http://nvie.com/img/git-model@2x.png)
 
 _[Image source](http://nvie.com/posts/a-successful-git-branching-model/)_
 
