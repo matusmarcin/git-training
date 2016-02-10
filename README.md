@@ -48,7 +48,7 @@ git add hello.txt
 git add assets
 ```
 
-Now check the `status` again and see there are changes *to be committed* and *not staged* (if you have modified something). 
+Now check the `status` again and see there are changes *to be committed* and *not staged* (if you have modified something).
 
 ![git status](/assets/status.png)
 
@@ -141,13 +141,13 @@ Now we have multiple branches and when running `git branch` we can see the curre
 
 To switch between existing branches just use `git checkout <branch>`.
 
-# Merging 
+# Merging
 
 _**Make friends with `merge` in this [tutorial by Atlassian](https://www.atlassian.com/git/tutorials/using-branches/git-merge).**_
 
-As soon as you use branches, you need to be able to merge. 
+As soon as you use branches, you need to be able to merge.
 
-Switch to `development` branch and make changes to `development.txt` file. Commit your changes. Let's have someone else do the same but also `push` their changes before you manage to. When you try to push them, git warns you to `pull` first. 
+Switch to `development` branch and make changes to `development.txt` file. Commit your changes. Let's have someone else do the same but also `push` their changes before you manage to. When you try to push them, git warns you to `pull` first.
 
 ![git push but pull first](/assets/push-rejected.png)
 
@@ -302,7 +302,7 @@ Good reading about patches can be find [here](http://rypress.com/tutorials/git/p
 
 # Git Workflows
 
-Workflows are about how we organise our work in git repo. We already know most of the commands we need for this, we're only going to be using them. 
+Workflows are about how we organise our work in git repo. We already know most of the commands we need for this, we're only going to be using them.
 
 ## Feature Branch Workflow
 
@@ -362,5 +362,6 @@ With this workflow you have **two remotes** where you can call your own `origin`
 * [Great tutorials by Atlassian](https://www.atlassian.com/git/tutorials)
 * [Learn Git in 15 minutes](https://try.github.io/)
 * [List of good resourced compiled by GitHub](https://help.github.com/articles/good-resources-for-learning-git-and-github/)
+* [More Git commands - repo summary, changelog...](https://github.com/tj/git-extras)
 
 Have fun!
