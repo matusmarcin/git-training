@@ -16,6 +16,7 @@ Up your Git game.
       * [Pull Request (PR)](#pull-request-pr)
     * [Gitflow Workflow](#gitflow-workflow)
     * [Forking Workflow](#forking-workflow)
+  * [Signing your commits](#singing-your-commits)
   * [Resources](#resources)
 
 ## Basics
@@ -355,6 +356,17 @@ This one is different from the others above since the workflow is:
 You can and still should use _feature branch workflow_ inside your own repository.
 
 With this workflow you have **two remotes** where you can call your own `origin` and the project maintainers `upstream`.
+
+# Signing your commits
+
+It's fairly simple: 
+
+* Generate a key
+* Add it to git config
+* Upload public key to github
+* `git commit -S` or set in config 
+
+Read here: [https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work)
 
 # Resources
 
